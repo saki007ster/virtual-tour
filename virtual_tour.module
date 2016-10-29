@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains virtual_tour.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function virtual_tour_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the virtual_tour module.
+    case 'help.page.virtual_tour':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Virtual Tour using Pannellum') . '</p>';
+      return $output;
+
+    default:
+  }
+}

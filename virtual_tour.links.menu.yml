@@ -1,0 +1,20 @@
+virtual_tour.virtual_tour_list:
+  title: 'Virtual Tours list'
+  route_name: virtual_tour.virtual_tour_types
+  description: 'List Virtiual Tour types'
+  parent: system.admin_structure
+  weight: 100
+
+# Equirectangular menu items definition
+entity.equirectangular.collection:
+  title: 'Equirectangular list'
+  route_name: entity.equirectangular.collection
+  description: 'List Equirectangular entities'
+  parent: virtual_tour.virtual_tour_list
+  weight: 100
+
+equirectangular.admin.structure.settings:
+  title: Equirectangular settings
+  description: 'Configure Equirectangular entities'
+  route_name: equirectangular.settings
+  parent: entity.equirectangular.collection
