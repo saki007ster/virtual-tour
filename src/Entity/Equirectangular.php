@@ -228,6 +228,18 @@ class Equirectangular extends ContentEntityBase implements EquirectangularInterf
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', FALSE);
 
+    $fields['hotspots'] = BaseFieldDefinition::create('hotspot')
+      ->setLabel(t('Hostspots'))
+      ->setRequired(FALSE)
+      ->setSetting('type', ['info' => 'info', 'scene' => 'scene'])
+      ->setCardinality(-1)
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('form', [
+        'type'    => 'hotspot_widget',
+        'weight'  => 0,
+      ])
+      ->setDisplayConfigurable('view', FALSE);
+
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
       ->setDescription(t('A boolean indicating whether the Equirectangular is published.'))
