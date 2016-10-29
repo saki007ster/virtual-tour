@@ -1,0 +1,16 @@
+
+virtual_tour.virtual_tour_types:
+  path: '/virtual-tour'
+  defaults:
+    _controller: '\Drupal\virtual_tour\Controller\VirtualTour::types'
+    _title: 'list'
+  requirements:
+    _permission: 'access content'
+
+equirectangular.settings:
+  path: 'admin/structure/virtual-tour/equirectangular/settings'
+  defaults:
+    _form: '\Drupal\virtual_tour\Form\EquirectangularSettingsForm'
+    _title: 'Equirectangular Settings'
+  requirements:
+    _permission: 'administer equirectangular entities'

@@ -1,0 +1,22 @@
+add equirectangular entities:
+  title: 'Create new Equirectangular entities'
+
+administer equirectangular entities:
+  title: 'Administer Equirectangular entities'
+  description: 'Allow to access the administration form to configure Equirectangular entities.'
+  restrict access: true
+
+delete equirectangular entities:
+  title: 'Delete Equirectangular entities'
+
+edit equirectangular entities:
+  title: 'Edit Equirectangular entities'
+
+access equirectangular overview:
+  title: 'Access the Equirectangular overview page'
+
+view published equirectangular entities:
+  title: 'View published Equirectangular entities'
+
+view unpublished equirectangular entities:
+  title: 'View unpublished Equirectangular entities'

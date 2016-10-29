@@ -1,0 +1,22 @@
+# Equirectangular routing definition
+equirectangular.settings_tab:
+  route_name: equirectangular.settings
+  title: 'Settings'
+  base_route: equirectangular.settings
+
+entity.equirectangular.canonical:
+  route_name: entity.equirectangular.canonical
+  base_route: entity.equirectangular.canonical
+  title: 'View'
+
+entity.equirectangular.edit_form:
+  route_name: entity.equirectangular.edit_form
+  base_route: entity.equirectangular.canonical
+  title: 'Edit'
+
+entity.equirectangular.delete_form:
+  route_name:  entity.equirectangular.delete_form
+  base_route:  entity.equirectangular.canonical
+  title: Delete
+  weight: 10
+

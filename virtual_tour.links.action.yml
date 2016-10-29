@@ -1,0 +1,5 @@
+entity.equirectangular.add_form:
+  route_name: entity.equirectangular.add_form
+  title: 'Add Equirectangular'
+  appears_on:
+    - entity.equirectangular.collection

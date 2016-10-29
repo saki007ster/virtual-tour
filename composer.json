@@ -1,0 +1,14 @@
+{
+  "name": "drupal/virtual_tour",
+  "type": "drupal-module",
+  "description": "Virtual Tour using Pannellum",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/virtual_tour",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/virtual_tour",
+    "source": "http://cgit.drupalcode.org/virtual_tour"
+  },
+  "require": { }
+}
