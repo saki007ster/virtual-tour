@@ -69,13 +69,19 @@ class HotspotWidget extends WidgetBase {
     ];
 
     if (isset($options['scene'])) {
-//     $element['scene_id'] = [
-//      '#title' => t('Scene Id'),
-//        '#type' => 'entity_autocomplete',
-//        '#target_type' => 'node',
-//        '#placeholder' => t('Scene Id'),
-//        '#default_value' => isset($items[$delta]->scene_id) ? $items[$delta]->scene_id : '',
-//      ];
+      $result = \Drupal::entityQuery('equirectangular')->execute();
+      $entity_storage = \Drupal::entityTypeManager()->getStorage('equirectangular');
+      $entities =$entity_storage->loadMultiple($result);
+      $scene_ids = [];
+      foreach ($entities as $entity) {
+        $scene_ids[$entity->id()] = $entity->getName();
+      }
+     $element['scene_id'] = [
+       '#title' => t('Scene Id'),
+       '#type' => 'select',
+       '#options' => array_merge([0 => 'Select Scene'], $scene_ids),
+       '#default_value' => isset($items[$delta]->scene_id) ? $items[$delta]->scene_id : '',
+     ];
     }
 
     return $element;
