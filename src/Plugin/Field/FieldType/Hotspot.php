@@ -57,10 +57,10 @@ class Hotspot extends FieldItemBase {
       ->setDescription(t("Title for hotspot"))
       ->setRequired(TRUE);
 
-//    $properties['scene_id'] = DataDefinition::create('string')
-//      ->setLabel(t('Scene Id'))
-//      ->setDescription(t("Scene Id for hotspot"))
-//      ->setRequired(TRUE);
+    $properties['scene_id'] = DataDefinition::create('integer')
+      ->setLabel(t('Scene Id'))
+      ->setDescription(t("Scene Id for hotspot"))
+      ->setRequired(TRUE);
 
     return $properties;
   }
@@ -80,13 +80,11 @@ class Hotspot extends FieldItemBase {
         'pitch' => [
           'description' => 'Pitch to render at.',
           'type' => 'int',
-//          'size' => 'tiny',
           'not null' => FALSE,
         ],
         'yaw' => array(
           'description' => 'Yaw to render at.',
           'type' => 'int',
-//          'size' => 'tiny',
           'not null' => FALSE,
         ),
         'text' => array(
@@ -94,11 +92,10 @@ class Hotspot extends FieldItemBase {
           'type' => 'varchar',
           'length' => 1024,
         ),
-//        'scene_id' => [
-//          'type' => 'text',
-//          'size' => 'tiny',
-//          'not null' => FALSE,
-//        ],
+        'scene_id' => [
+          'type' => 'int',
+          'not null' => FALSE,
+        ],
       ],
     ];
 

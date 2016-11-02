@@ -72,6 +72,22 @@ class Equirectangular extends ContentEntityBase implements EquirectangularInterf
     return $this->get('title')->value;
   }
 
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getName() {
+    return $this->get('title')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setName($title) {
+    $this->set('title', $title);
+    return $this;
+  }
+
   /**
    * {@inheritdoc}
    */
